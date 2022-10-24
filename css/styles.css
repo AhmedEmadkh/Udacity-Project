@@ -108,7 +108,7 @@ section {
   }
 }
 .navbar__menu .menu__link:hover {
-  background: rgb(167, 160, 229);
+  background: rgb(164, 170, 221);
   transition: ease 0.3s all;
   border-radius: 10%;
 }

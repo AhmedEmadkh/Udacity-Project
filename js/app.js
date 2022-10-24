@@ -52,12 +52,3 @@ window.addEventListener("scroll", () => {
 
 // End Main functions
 
-
-// Start scrolling smooth behavior
-
-sonNav.addEventListener("click", function (scrollToSec) {
-  scrollToSec.preventDefault();
-  if (scrollToSec.target.dataset.nav) {
-    document.getElementById("section4").scrollIntoView({behavior:"smooth"})
-  }
-})
