@@ -17,9 +17,9 @@ body {
   font-family: 'Merriweather', serif;
   color: #fff;
 }
-/* html{
+html{
   scroll-behavior: smooth;
-} */
+}
 
 /* Typeography General*/
 h1 {
@@ -70,8 +70,18 @@ section {
   padding-left: 0;
   margin: 0;
   text-align: right;
+  background-color: white;
+  transition: transform 0.2s;
 }
-
+.hiddenNav{
+  transform: translateY(-100px);
+}
+@media(max-width:767px){
+  .navbar__menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .navbar__menu li {
   display: inline-block;
 }
@@ -81,15 +91,31 @@ section {
   padding: 1em;
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: black;
 }
 
+@media(max-width:767px){
+  .navbar__menu .menu__link{
+    font-size: 14px;
+    padding: 0.5;
+    min-width: 100%;
+    margin: 12px 0;
+  } 
+  .navbar__menu .menu__link:hover {
+    background: #000;
+    transition: ease 0.3s all;
+    border-radius: 0;
+  }
+}
 .navbar__menu .menu__link:hover {
-  background: #333;
-  color: #fff;
+  background: rgb(167, 160, 229);
   transition: ease 0.3s all;
+  border-radius: 10%;
 }
-
+.navbar__menu .active-li{
+  background-color: #333;
+  color: #fff;
+}
 /* Header Styles */
 .page__header {
   background: #fff;
@@ -190,7 +216,19 @@ section:nth-of-type(3n + 1) .landing__container::after {
   opacity: 0;
   transition: ease 0.5s all;
 }
-
+button{
+  background-color: rgba(0,13,60,1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  position: fixed;
+  right: 20px;
+  bottom: 150px;
+  cursor: pointer;
+  display: none;
+}
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
