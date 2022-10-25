@@ -1,10 +1,9 @@
 // Start global variables
-const activePage = window.location.pathname;
 const navBar = document.querySelector(".navbar__menu")
 const navLinks = document.querySelectorAll(".menu__link");
 const fatherNav = document.getElementById("navbar__list");
 const sections = document.querySelectorAll("section");
-const liSelector = document.querySelectorAll("li");
+const liSelector = document.querySelectorAll("li a");
 let lastScroll = window.scrollY;
 
 // End global variables
@@ -12,7 +11,7 @@ let lastScroll = window.scrollY;
 
 // Start helper function to create nav list
 function createDynamicListBar() {
-  for (section of sections) {
+  for (const section of sections) {
     sonNav = document.createElement('li');
     sonNav.innerHTML = `<li><a href="#${section.id}" class = "menu__link">${section.dataset.nav}</a></li>`
     fatherNav.appendChild(sonNav);
@@ -52,3 +51,13 @@ window.addEventListener("scroll", () => {
 
 // End Main functions
 
+
+// Scrolling smooth behavior
+
+
+sections.forEach((section) => {
+  sonNav.addEventListener("click",(l)=>{
+    l.preventDefault();
+    section.scrollIntoView({behavior:"smooth"})
+  })
+});
