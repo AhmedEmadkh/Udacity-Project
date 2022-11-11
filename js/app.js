@@ -25,9 +25,11 @@ createDynamicListBar();
 window.onscroll = function () {
   for (const sec of sections) {
     let anchorSelector = document.querySelector(`a[href="#${sec.id}"]`);
+    //adding height for the window for adding active class
     if (sec.getBoundingClientRect().top >= -400 && sec.getBoundingClientRect().top < 150) {
       sec.classList.add("active");
       anchorSelector.classList.add('active-li')
+      //adding height for the window for removing active class
     } else {
       sec.classList.remove("active");
       anchorSelector.classList.remove('active-li')
@@ -36,11 +38,13 @@ window.onscroll = function () {
 }
 
 
-// Hidden Nav On Scrolling
+// Hidden Nav On Scrolling Event Listener
 window.addEventListener("scroll", () => {
   if (lastScroll < window.scrollY) {
+    // Adding class for the nav for hidding
     fatherNav.classList.add('hiddenNav')
   } else {
+   // removing class for the nav for hidding
     fatherNav.classList.remove('hiddenNav')
   }
   lastScroll = window.scrollY;
@@ -52,9 +56,7 @@ window.addEventListener("scroll", () => {
 // End Main functions
 
 
-// Scrolling smooth behavior
-
-
+// Smooth scroll function
 sections.forEach((section) => {
   sonNav.addEventListener("click",(l)=>{
     l.preventDefault();
