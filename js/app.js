@@ -15,6 +15,12 @@ function createDynamicListBar() {
     sonNav = document.createElement('li');
     sonNav.innerHTML = `<li><a href="#${section.id}" class = "menu__link">${section.dataset.nav}</a></li>`
     fatherNav.appendChild(sonNav);
+    sonNav.addEventListener('click',(li)=>{
+      // console.log('click')
+      li.preventDefault();
+      section.scrollIntoView({behavior:'smooth'})
+
+    })
   }
 }
 createDynamicListBar();
@@ -57,11 +63,3 @@ window.onscroll = function () {
 
 // End Main functions
 
-
-// Smooth scroll function
-sections.forEach((section) => {
-  sonNav.addEventListener("click",(l)=>{
-    l.preventDefault();
-    section.scrollIntoView({behavior:"smooth"})
-  })
-});
