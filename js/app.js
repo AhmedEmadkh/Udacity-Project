@@ -38,17 +38,19 @@ window.onscroll = function () {
 }
 
 
-// Hidden Nav On Scrolling Event Listener
-window.addEventListener("scroll", () => {
-  if (lastScroll < window.scrollY) {
-    // Adding class for the nav for hidding
-    fatherNav.classList.add('hiddenNav')
-  } else {
-   // removing class for the nav for hidding
-    fatherNav.classList.remove('hiddenNav')
-  }
-  lastScroll = window.scrollY;
-})
+// // Hidden Nav On Scrolling Event Listener
+
+
+// window.addEventListener("scroll", () => {
+//   if (lastScroll < window.scrollY) {
+//     // Adding class for the nav for hidding
+//     fatherNav.classList.add('hiddenNav')
+//   } else {
+//    // removing class for the nav for hidding
+//     fatherNav.classList.remove('hiddenNav')
+//   }
+//   lastScroll = window.scrollY;
+// })
 
 
 
