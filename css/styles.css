@@ -17,9 +17,6 @@ body {
   font-family: 'Merriweather', serif;
   color: #fff;
 }
-/* html{
-  scroll-behavior: smooth;
-} */
 
 /* Typeography General*/
 h1 {
@@ -101,16 +98,13 @@ section {
     min-width: 100%;
     margin: 12px 0;
   } 
-  .navbar__menu .menu__link:hover {
-    background: #000;
-    transition: ease 0.3s all;
-    border-radius: 0;
-  }
 }
-.navbar__menu .menu__link:hover {
-  background: rgb(164, 170, 221);
-  transition: ease 0.3s all;
-  border-radius: 10%;
+@media(hover:hover){
+  .navbar__menu .menu__link:hover {
+    background: rgb(164, 170, 221);
+    transition: ease 0.3s all;
+    border-radius: 10%;
+  }
 }
 .navbar__menu .active-li{
   background-color: #333;
