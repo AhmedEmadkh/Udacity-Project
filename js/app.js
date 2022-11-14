@@ -8,21 +8,25 @@ let lastScroll = window.scrollY;
 
 // End global variables
 
-
+/* *****************This is my CODE************** */
 // Start helper function to create nav list
 function createDynamicListBar() {
   for (const section of sections) {
+    // Creating Li elemlent
     sonNav = document.createElement('li');
     sonNav.innerHTML = `<li><a href="#${section.id}" class = "menu__link">${section.dataset.nav}</a></li>`
     fatherNav.appendChild(sonNav);
+    // Smooth scroll on clicking
     sonNav.addEventListener('click',(li)=>{
       // console.log('click')
+      // Preventing Degault
       li.preventDefault();
+      // Adding smooth behavior 
       section.scrollIntoView({behavior:'smooth'})
-
     })
   }
 }
+// Activating the function
 createDynamicListBar();
 // End helper function to create nav list
 
