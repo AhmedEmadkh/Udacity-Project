@@ -1,27 +1,12 @@
 
 # Udacity-project
 
-this project is alanding page whit HTML,CSS,JS 
 
 
 
-
-## Installation
-
-Install my-project with npm
-
-```bash
-  
-```
-    
-## Usage
+## Describtion
 
 ```bresh
-this project has been made for just training for J.S
+
+This project is a landing page whit HTML,CSS,JS 
 ```
-
-
-## License
-
-Udacity-Licence
-
